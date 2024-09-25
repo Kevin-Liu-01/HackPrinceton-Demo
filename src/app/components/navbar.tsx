@@ -1,10 +1,10 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import MLHBanner from "./mlh";
 
 const Navbar = () => {
   return (
-    <nav className="fixed z-50 top-0 right-0 rounded-l-full">
+    <nav className="fixed z-50 top-0 mx-auto rounded-l-full">
       <div className="bg-red-500 flex items-center justify-end w-full h-24 m-4">
         <div className="text-4xl text-center font-extrabold mr-8">
           HACK PRINCETON

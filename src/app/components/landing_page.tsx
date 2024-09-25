@@ -1,5 +1,4 @@
 import Vault from "./vault";
-import Image from "next/image";
 
 const LandingPage = () => {
   return (
