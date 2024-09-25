@@ -5,7 +5,7 @@ import LandingPage from "./components/landing_page";
 
 export default function Home() {
   return (
-    <div className="relative grid items-center justify-items-center min-h-screen pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
+    <div className="relative bg-black grid items-center justify-items-center min-h-screen pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
       <Navbar />
       <LandingPage />
       <div className="text-4xl text-center font-extrabold">MORE STUFF!!</div>

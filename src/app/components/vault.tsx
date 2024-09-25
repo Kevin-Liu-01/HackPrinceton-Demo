@@ -29,7 +29,7 @@ const Vault = () => {
   }, []);
 
   return (
-    <div className="h-[300vh] bg-red-600 p-6 relative w-full left-0">
+    <div className="h-[300vh] bg-red-600 p-6 relative left-0">
       <div className="sticky top-[30%]">
         {/* Bottom Circle */}
         <div className="relative h-[400px] w-[400px] rounded-full flex items-center justify-center border-[5px] p-2 border-black bg-red-800">
@@ -79,9 +79,15 @@ const Vault = () => {
           }}
         >
           {/* Vault Handle */}
-          <div className="rounded-full p-4 flex items-center align-center bg-black font-extrabold border border-black w-full m-5">
+          <div className="rounded-full p-4 flex items-center bg-black font-extrabold border border-black w-full m-5">
             LOOK INSIDE
-            <div className="absolute h-24 w-24 border-4 bg-red-600 drop-shadow-lg border-black rounded-full left-[calc(50%-3rem)]"></div>
+            <div className="absolute flex justify-center items-center h-24 w-24 border-4 bg-red-600 drop-shadow-lg border-black rounded-full left-[calc(50%-3rem)]">
+              <img
+                src="/images/HackHeist_images/HACKHEIST_Maskblack.png"
+                alt="Folder"
+                className="absolute h-[70%] rounded-full border-4 border-black"
+              />
+            </div>
           </div>
         </div>
       </div>
