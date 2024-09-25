@@ -6,12 +6,12 @@ const Vault = () => {
   const [offsetX, setOffsetX] = useState(0);
   const [rotation, setRotation] = useState(0);
   const SiteURLS = [
-    { name: "Home", color: "red" },
-    { name: "About", color: "green" },
-    { name: "Tracks", color: "yellow" },
-    { name: "FAQ", color: "blue" },
-    { name: "Sponsors", color: "orange" },
-    { name: "Resources", color: "pink" },
+    { name: "Home", color: "bg-orange-500" },
+    { name: "About", color: "bg-green-500" },
+    { name: "Tracks", color: "bg-yellow-500" },
+    { name: "FAQ", color: "bg-blue-500" },
+    { name: "Sponsors", color: "bg-purple-500" },
+    { name: "Resources", color: "bg-pink-500" },
   ];
 
   useEffect(() => {
@@ -29,25 +29,25 @@ const Vault = () => {
   }, []);
 
   return (
-    <div className="h-[300vh] bg-red-600 p-6 relative left-0">
+    <div className="h-[350vh] bg-red-600 p-6 relative left-0">
       <div className="sticky top-[30%]">
         {/* Bottom Circle */}
-        <div className="relative h-[400px] w-[400px] rounded-full flex items-center justify-center border-[5px] p-2 border-black bg-red-800">
-          {" "}
+        <div className="relative z-10 h-[25rem] w-[25rem] rounded-full flex items-center justify-center border p-2 border-black bg-red-900">
+          <img
+            src="/images/HackHeist_images/gear.png"
+            alt="Vault"
+            className="absolute top-0 p-5 fill-black"
+          />
         </div>
-
-        {/* Folder blocker */}
-        <div
-          className="z-40 absolute bottom-0 border-y-[5px] border-black h-[50%] ml-[50%] bg-red-800 flex items-center"
-          style={{
-            width: `${offsetX}px`, // Path stretches as the circle moves
-            transition: "width 0.1s ease-out", // Smooth width change
-          }}
-        ></div>
-
+        {/*Vault handles */}
+        <img
+          src="/images/HackHeist_images/vaultdoor.png"
+          alt="Vault"
+          className="absolute top-0 z-0 fill-black"
+        />
         {/* Folder Holder */}
         <div
-          className="absolute overflow-hidden top-0 border-y-[5px] border-black h-full ml-[50%] z-20 bg-red-800 flex items-center"
+          className="absolute overflow-x-clip overflow-y-visible top-0 border-y border-black h-full ml-[50%] bg-red-800 flex items-center"
           style={{
             width: `${offsetX}px`, // Path stretches as the circle moves
             transition: "width 0.1s ease-out", // Smooth width change
@@ -56,7 +56,7 @@ const Vault = () => {
           {/* Circle folders */}
           <div
             id="folders"
-            className="relative transition-all h-[70%] w-full flex items-center p-4 space-x-[-20%]"
+            className="relative transition-all z-[26] h-[70%] w-full flex items-center p-4 space-x-[-20%]"
           >
             {/* Overlapping circles */}
             {SiteURLS.map((folder, index) => (
@@ -65,12 +65,19 @@ const Vault = () => {
                 <VaultFolder folder={folder} />
               </div>
             ))}
+            {/* Folder blocker */}
+            <div
+              className="z-40 absolute bottom-0 border right-0 w-full rounded-l-full border-black h-[20%] bg-red-700 flex items-center"
+              style={{
+                width: `${offsetX}px`, // Path stretches as the circle moves
+                transition: "width 0.1s ease-out", // Smooth width change
+              }}
+            ></div>
           </div>
         </div>
-
         {/* Vault Door */}
         <div
-          className={`absolute flex items-center z-40 align-center text-center text-white w-[400px] h-[400px] bg-red-600 border-[5px] border-black drop-shadow-xl rounded-full`}
+          className={`absolute flex items-center z-40 align-center text-center text-white w-[25rem] h-[25rem] bg-red-600 border border-black drop-shadow-xl rounded-full`}
           style={{
             top: "0px",
             left: `${offsetX}px`,
@@ -79,15 +86,21 @@ const Vault = () => {
           }}
         >
           {/* Vault Handle */}
-          <div className="rounded-full p-4 flex items-center bg-black font-extrabold border border-black w-full m-5">
-            LOOK INSIDE
-            <div className="absolute flex justify-center items-center h-24 w-24 border-4 bg-red-600 drop-shadow-lg border-black rounded-full left-[calc(50%-3rem)]">
+
+          <div className="rounded-full p-4 flex items-center bg-black border border-black w-full m-5">
+            <span className="z-20 font-extrabold">LOOK INSIDE</span>
+            <div className="absolute z-20 flex justify-center items-center h-24 w-24 border bg-red-600 drop-shadow-lg border-black rounded-full left-[calc(50%-3rem)]">
               <img
                 src="/images/HackHeist_images/mask.png"
                 alt="Mask"
-                className="absolute h-[70%] rounded-full border-4 border-black"
+                className="absolute h-[70%] rounded-full border border-black"
               />
             </div>
+            <img
+              src="/images/HackHeist_images/gear.png"
+              alt="Vault"
+              className="absolute h-48 w-48 z-10 p-5 fill-black"
+            />
           </div>
         </div>
       </div>
