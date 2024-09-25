@@ -11,6 +11,9 @@ dependencies:
   react:
     specifier: ^18
     version: 18.3.1
+  react-curved-text:
+    specifier: ^3.0.1
+    version: 3.0.1(react-dom@18.3.1)(react@18.3.1)
   react-dom:
     specifier: ^18
     version: 18.3.1(react@18.3.1)
@@ -888,6 +891,11 @@ packages:
     dependencies:
       esutils: 2.0.3
     dev: true
+
+  /dommatrix@1.0.3:
+    resolution: {integrity: sha512-l32Xp/TLgWb8ReqbVJAFIvXmY7go4nTxxlWiAFyhoQw9RKEOHBZNnyGvJWqDVSPmq3Y9HlM4npqF/T6VMOXhww==}
+    deprecated: dommatrix is no longer maintained. Please use @thednp/dommatrix.
+    dev: false
 
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -2324,6 +2332,17 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
+  /react-curved-text@3.0.1(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-tHRDAfiVa8bVMTadRdHfGoO/PjPgLF42RODAWoQlc2PNnwTDBh0hbSAZtNiNSmd8C3gB2d0rlNd841UXb0/rTQ==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      svg-path-commander: 1.0.5
+    dev: false
+
   /react-dom@18.3.1(react@18.3.1):
     resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
@@ -2686,6 +2705,12 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /svg-path-commander@1.0.5:
+    resolution: {integrity: sha512-hhQfARVXoPrwwe4DNPWM4hjQLK7rTxwQ+TUc5mxoe5g0k5eStc4SPnKqmivlm/dzZ98bI+yDyKye92n2t+oOiQ==}
+    dependencies:
+      dommatrix: 1.0.3
+    dev: false
 
   /tailwindcss@3.4.13:
     resolution: {integrity: sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==}

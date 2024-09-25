@@ -10,7 +10,7 @@ const VaultFolder = (props: { folder: Folder }) => {
     <>
       <a
         href={`#${props.folder.name}`}
-        className={`${props.folder.color} h-full relative drop-shadow-lg w-full border border-black flex items-center justify-center text-white font-bold cursor-pointer transition-all duration-200 group-hover:scale-110 group-hover:-translate-y-3`}
+        className={`${props.folder.color} h-full relative drop-shadow-xl w-full border border-black flex items-center justify-center text-white font-bold cursor-pointer transition-all duration-200 group-hover:scale-110 group-hover:-translate-y-3`}
       >
         <div className="h-full w-full">
           <Image
