@@ -13,7 +13,7 @@ const VaultFolder = (props: { folder: Folder }) => {
       >
         <img
           src="/images/crowd.jpg"
-          alt="Folder"
+          alt={props.folder.name + " Folder"}
           className="absolute border-4 border-black h-full w-full m-4 rounded-xl top-0 left-0"
         />
         {/* Folder Tab */}

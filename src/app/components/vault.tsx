@@ -83,8 +83,8 @@ const Vault = () => {
             LOOK INSIDE
             <div className="absolute flex justify-center items-center h-24 w-24 border-4 bg-red-600 drop-shadow-lg border-black rounded-full left-[calc(50%-3rem)]">
               <img
-                src="/images/HackHeist_images/HACKHEIST_Maskblack.png"
-                alt="Folder"
+                src="/images/HackHeist_images/mask.png"
+                alt="Mask"
                 className="absolute h-[70%] rounded-full border-4 border-black"
               />
             </div>
