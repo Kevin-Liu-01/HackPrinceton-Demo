@@ -3,6 +3,7 @@ import Image from "next/image";
 interface Folder {
   name: string;
   color: string;
+  link: string;
 }
 
 const VaultFolder = (props: { folder: Folder }) => {
@@ -14,7 +15,7 @@ const VaultFolder = (props: { folder: Folder }) => {
       >
         <div className="h-full w-full">
           <Image
-            src="/images/crowd.jpg"
+            src={props.folder.link}
             alt={props.folder.name + " Folder"}
             fill={true}
             className="absolute border border-black m-4 rounded-xl  "
