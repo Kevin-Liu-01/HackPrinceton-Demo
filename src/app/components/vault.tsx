@@ -3,19 +3,19 @@ import React, { useState, useEffect } from "react";
 import VaultFolder from "./vault_folder";
 import Image from "next/image";
 import VaultImage from "./vault_image";
-import { MouseIcon } from "lucide-react";
+import { LassoSelectIcon, MouseIcon } from "lucide-react";
 // import ReactCurvedText from "react-curved-text";
 
 const Vault = () => {
   const [offsetX, setOffsetX] = useState(0);
   const [rotation, setRotation] = useState(0);
   const SiteURLS = [
-    { name: "Home", color: "bg-orange-500" },
-    { name: "About", color: "bg-green-500" },
-    { name: "Tracks", color: "bg-yellow-500" },
-    { name: "FAQ", color: "bg-blue-500" },
-    { name: "Sponsors", color: "bg-purple-500" },
-    { name: "Resources", color: "bg-pink-500" },
+    { name: "Home", color: "bg-orange-500", link: "/images/promo1.jpg" },
+    { name: "About", color: "bg-green-500", link: "/images/promo2.jpg" },
+    { name: "Tracks", color: "bg-yellow-500", link: "/images/promo3.jpeg" },
+    { name: "FAQ", color: "bg-blue-500", link: "/images/promo4.jpeg" },
+    { name: "Sponsors", color: "bg-purple-500", link: "/images/promo5.jpg" },
+    { name: "Resources", color: "bg-pink-500", link: "/images/promo6.jpg" },
   ];
 
   useEffect(() => {
@@ -57,11 +57,11 @@ const Vault = () => {
         <div className="relative z-10 h-[25rem] w-[25rem] rounded-full flex items-center justify-center border-4 p-2 border-black bg-red-900">
           <VaultImage
             url="/images/HackHeist_Images/gear.png"
-            height="25rem"
-            width="25rem"
+            height="h-[25rem]"
+            width="w-[25rem]"
             left=""
             right=""
-            top="0px"
+            top="top-[0px]"
             down=""
             rotation={rotation / 2}
             invert={""}
@@ -107,8 +107,8 @@ const Vault = () => {
             >
               <VaultImage
                 url="/images/HackHeist_Images/gear.png"
-                height="4.5rem"
-                width="4.5rem"
+                height="h-[4.5rem]"
+                width="w-[4.5rem]"
                 left=""
                 right=""
                 top=""
@@ -117,8 +117,8 @@ const Vault = () => {
                 invert={""}
                 alt="black-blocker-gear"
               />
-              <div className="ml-24 bg-black rounded-full px-4 py-1 font-extrabold text-white whitespace-nowrap">
-                Learn about HackPrinceton!
+              <div className="ml-24 flex items-center gap-2 bg-black rounded-full px-4 py-1 font-extrabold text-white whitespace-nowrap">
+                <LassoSelectIcon /> Learn about HackPrinceton!
               </div>
             </div>
           </div>
@@ -136,12 +136,12 @@ const Vault = () => {
           {/* White Connector Gear */}
           <VaultImage
             url="/images/HackHeist_Images/gear.png"
-            height="7rem"
-            width="7rem"
+            height="h-[7rem]"
+            width="w-[7rem]"
             left=""
-            right="15%"
+            right="right-[15%]"
             top=""
-            down="31%"
+            down="bottom-[31%]"
             rotation={rotation * 5}
             invert={"invert"}
             alt="white-connector-gear"
@@ -149,12 +149,12 @@ const Vault = () => {
           {/* Alternate gear */}
           <VaultImage
             url="/images/HackHeist_Images/gear2.svg"
-            height="7rem"
-            width="7rem"
+            height="h-[7rem]"
+            width="w-[7rem]"
             left=""
-            right="23%"
+            right="right-[23%]"
             top=""
-            down="16%"
+            down="bottom-[16%]"
             rotation={rotation * 5}
             invert={""}
             alt="alternate-black-gear"
@@ -192,22 +192,22 @@ const Vault = () => {
             </div>
             <VaultImage
               url="/images/HackHeist_Images/gear.png"
-              height="12rem"
-              width="12rem"
-              left=""
-              right="10%"
-              top="10%"
+              height="h-[6rem]"
+              width="w-[6rem]"
+              left="left-[22%]"
+              right=""
+              top="top-[17%]"
               down=""
               rotation={rotation * 2}
-              invert={"invert"}
+              invert={""}
               alt="test-white-gear"
             />
             {/* Mini white gear */}
             <VaultImage
               url="/images/HackHeist_Images/gear.png"
-              height="4.5rem"
-              width="4.5rem"
-              left="78%"
+              height="h-[4.5rem]"
+              width="w-[4.5rem]"
+              left="left-[78%]"
               right=""
               top=""
               down=""

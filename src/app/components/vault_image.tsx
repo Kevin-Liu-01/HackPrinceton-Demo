@@ -16,13 +16,14 @@ interface ImageProps {
 const VaultImage = (props: ImageProps) => {
   return (
     <div
-      className={`absolute h-[${props.height}] w-[${props.width}] left-[${props.left}] right-[${props.right}] top-[${props.top}] bottom-[${props.down}] `}
+      className={`absolute ${props.height} ${props.width} ${props.left} ${props.right} ${props.top} ${props.down}`}
     >
       <Image
         src={props.url}
         alt="Vault"
         fill={true}
-        className={`${props.invert} z-10 p-5`}
+        sizes={"100%"}
+        className={`${props.invert} z-10 p-5 drop-shadow-lg`}
         style={{
           transform: `rotate(${props.rotation}deg)`,
           transition: "left 0.1s ease-out, transform 0.1s ease-out",

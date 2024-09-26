@@ -49,34 +49,25 @@ const Navbar = () => {
           }`}
         >
           <img
-            src="/images/HackHeist_images/mask.png"
+            src="/images/HackHeist_Images/mask.png"
             alt="Mask"
             className="p-2 w-auto"
           />
         </div>
-        <div className="text-white text-xl ml-4 font-bold relative">
+        <div className="flex items-center text-white text-xl ml-4 font-bold relative">
           HackPrinceton{" "}
-          <span className="absolute mb-8 bg-gray-400 text-black text-xs rounded-xl px-2 py-1">
+          <span className="ml-2 bg-yellow-400 text-red-600 text-xs rounded-xl px-2 py-1">
             DEMO
           </span>
         </div>
 
         <div className=" mx-auto grid grid-cols-6 justify-center items-center gap-4 text-sm">
-          <NavbarButton name="Home" link="https://hackprinceton.com" />
-          <NavbarButton name="About" link="https://hackprinceton.com/about" />
-          <NavbarButton
-            name="Tracks"
-            link="https://hackprinceton.com/schedule"
-          />
-          <NavbarButton name="FAQ" link="https://hackprinceton.com/faq" />
-          <NavbarButton
-            name="Sponsors"
-            link="https://hackprinceton.com/sponsors"
-          />
-          <NavbarButton
-            name="Resources"
-            link="https://hackprinceton.com/resources"
-          />
+          <NavbarButton name="Home" link="#home" />
+          <NavbarButton name="About" link="#about" />
+          <NavbarButton name="Tracks" link="#schedule" />
+          <NavbarButton name="FAQ" link="#faq" />
+          <NavbarButton name="Sponsors" link="#sponsors" />
+          <NavbarButton name="Resources" link="#resources" />
           <MLHBanner />
         </div>
       </div>
