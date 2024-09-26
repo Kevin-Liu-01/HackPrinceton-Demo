@@ -18,12 +18,12 @@ const VaultFolder = (props: { folder: Folder }) => {
             src={props.folder.link}
             alt={props.folder.name + " Folder"}
             fill={true}
-            className="absolute border border-black m-4 rounded-xl  "
+            className="absolute object-cover border border-black m-4 fill-white rounded-xl  "
           />
         </div>
         {/* Folder Tab */}
         <div
-          className={`${props.folder.color} absolute -top-12 left-[-1px] transform border-t border-x border-black h-12 bg-black rounded-t-lg`}
+          className={`${props.folder.color} absolute -top-12 left-[-1px] transform border-t border-x border-black h-12 bg-black rounded-t-xl`}
         >
           <span className="p-2 m-4 border border-black rounded-xl bg-white text-black">
             {props.folder.name}
