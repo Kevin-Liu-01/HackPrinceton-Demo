@@ -10,7 +10,7 @@ interface NavbarButton {
 const NavbarButton = (props: NavbarButton) => {
   return (
     <a
-      className="border-2 border-red-600 rounded-lg p-2 px-3 flex items-center justify-center"
+      className="border border-red-600 rounded-xl p-2 flex items-center justify-center"
       href={props.link}
     >
       {props.name}
@@ -38,7 +38,9 @@ const Navbar = () => {
     <nav className="fixed z-50 top-0 w-full">
       <div
         className={`${
-          isScrolled ? "bg-black" : "bg-black/70 rounded-[2.5rem] m-4"
+          isScrolled
+            ? "bg-black border border-x-0 border-t-0 border-b-red-600"
+            : "bg-black/50 border border-b-red-600 rounded-[2.5rem] m-4"
         } relative flex items-center transition-all drop-shadow-lg h-20 duration-300 px-4 py-2`}
       >
         <div
@@ -59,7 +61,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        <div className=" mx-auto flex justify-center items-center gap-8 text-sm">
+        <div className=" mx-auto grid grid-cols-6 justify-center items-center gap-4 text-sm">
           <NavbarButton name="Home" link="https://hackprinceton.com" />
           <NavbarButton name="About" link="https://hackprinceton.com/about" />
           <NavbarButton

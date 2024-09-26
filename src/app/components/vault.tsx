@@ -1,6 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import VaultFolder from "./vault_folder";
+import Image from "next/image";
+import VaultImage from "./vault_image";
+import { MouseIcon } from "lucide-react";
 // import ReactCurvedText from "react-curved-text";
 
 const Vault = () => {
@@ -30,7 +33,7 @@ const Vault = () => {
   }, []);
 
   return (
-    <div className="h-[350vh] bg-red-600 p-6 relative left-0">
+    <div className="h-[350vh] z-20 p-6 relative left-0">
       <div className="sticky top-[30%] mb-[30%]">
         {/* <div className="absolute top-0 left-0">
           <ReactCurvedText
@@ -52,22 +55,28 @@ const Vault = () => {
         </div> */}
         {/* Bottom Circle */}
         <div className="relative z-10 h-[25rem] w-[25rem] rounded-full flex items-center justify-center border-4 p-2 border-black bg-red-900">
-          <img
-            src="/images/HackHeist_images/gear.png"
-            alt="Vault"
-            className="absolute top-0 p-5 fill-black"
-            style={{
-              transform: `rotate(${rotation / 2}deg)`,
-              transition: "left 0.1s ease-out, transform 0.1s ease-out",
-            }}
+          <VaultImage
+            url="/images/HackHeist_Images/gear.png"
+            height="25rem"
+            width="25rem"
+            left=""
+            right=""
+            top="0px"
+            down=""
+            rotation={rotation / 2}
+            invert={""}
+            alt="big-gear"
           />
         </div>
         {/*Vault handles */}
-        <img
-          src="/images/HackHeist_images/vaultdoor.png"
-          alt="Vault"
-          className="absolute top-0 z-0 fill-black"
-        />
+        <div>
+          <Image
+            src="/images/HackHeist_Images/vaultdoor.png"
+            alt="Vault"
+            fill={true}
+            className="absolute top-0 z-0"
+          />
+        </div>
         {/* Folder Holder */}
         <div
           className="absolute overflow-x-clip overflow-y-visible top-0 border-y-4 border-black h-full ml-[50%] bg-red-800 flex items-center"
@@ -96,14 +105,17 @@ const Vault = () => {
                 transition: "width 0.1s ease-out", // Smooth width change
               }}
             >
-              <img
-                src="/images/HackHeist_images/gear.png"
-                alt="Vault"
-                className="absolute h-[4.5rem] w-[4.5rem] z-10 p-4 fill-black"
-                style={{
-                  transform: `rotate(${rotation * 5}deg)`,
-                  transition: "left 0.1s ease-out, transform 0.1s ease-out",
-                }}
+              <VaultImage
+                url="/images/HackHeist_Images/gear.png"
+                height="4.5rem"
+                width="4.5rem"
+                left=""
+                right=""
+                top=""
+                down=""
+                rotation={rotation * 5}
+                invert={""}
+                alt="black-blocker-gear"
               />
               <div className="ml-24 bg-black rounded-full px-4 py-1 font-extrabold text-white whitespace-nowrap">
                 Learn about HackPrinceton!
@@ -121,30 +133,38 @@ const Vault = () => {
             transition: "left 0.1s ease-out, transform 0.1s ease-out",
           }}
         >
-          <img
-            src="/images/HackHeist_images/gear.png"
-            alt="Vault"
-            className="absolute h-[7rem] invert bottom-[31%] right-[15%] w-[7rem] z-10 p-5"
-            style={{
-              transform: `rotate(${rotation * 5}deg)`,
-              transition: "left 0.1s ease-out, transform 0.1s ease-out",
-            }}
+          {/* White Connector Gear */}
+          <VaultImage
+            url="/images/HackHeist_Images/gear.png"
+            height="7rem"
+            width="7rem"
+            left=""
+            right="15%"
+            top=""
+            down="31%"
+            rotation={rotation * 5}
+            invert={"invert"}
+            alt="white-connector-gear"
           />
-          <img
-            src="/images/HackHeist_images/gear2.svg"
-            alt="Vault"
-            className="absolute h-[7rem] bottom-[16%] right-[23%] w-[7rem] z-10 p-5"
-            style={{
-              transform: `rotate(-${rotation * 5}deg)`,
-              transition: "left 0.1s ease-out, transform 0.1s ease-out",
-            }}
+          {/* Alternate gear */}
+          <VaultImage
+            url="/images/HackHeist_Images/gear2.svg"
+            height="7rem"
+            width="7rem"
+            left=""
+            right="23%"
+            top=""
+            down="16%"
+            rotation={rotation * 5}
+            invert={""}
+            alt="alternate-black-gear"
           />
           {/* Internal Circle */}
           <div className="h-[80%] w-[80%] m-4 absolute border border-black bg-red-600 rounded-full drop-shadow-xl"></div>
           {/* Chains */}
           <img
-            src="/images/HackHeist_images/chains.webp"
-            alt="Mask"
+            src="/images/HackHeist_Images/chains.webp"
+            alt="Chains"
             className="absolute h-[30%] rounded-full fill-black"
             style={{
               transform: `rotate(-${rotation * 2}deg)`,
@@ -153,36 +173,47 @@ const Vault = () => {
           />
           {/* Vault Handle */}
           <div className="rounded-full p-4 flex items-center z-10 bg-black border border-black w-full m-5">
-            <span className="z-20 font-extrabold">LOOK INSIDE</span>
+            <span className="z-20 flex items-center gap-1 text-sm font-extrabold">
+              <MouseIcon /> SCROLL!
+            </span>
             <div className="absolute z-20 flex justify-center items-center h-24 w-24 border bg-red-600 drop-shadow-lg border-black rounded-full left-[calc(50%-3rem)]">
-              <img
-                src="/images/HackHeist_images/mask.png"
-                alt="Mask"
-                className="absolute h-[70%] rounded-full border border-black"
-                style={{
-                  transform: `rotate(-${rotation * 2}deg)`,
-                  transition: "left 0.1s ease-out, transform 0.1s ease-out",
-                }}
-              />
+              <div className="absolute h-[70%] w-[70%] overflow-hidden rounded-full bg-black border border-black">
+                <Image
+                  src="/images/HackHeist_Images/mask.png"
+                  alt="Mask"
+                  fill={true}
+                  className="px-2"
+                  style={{
+                    transform: `rotate(-${rotation * 2}deg)`,
+                    transition: "left 0.1s ease-out, transform 0.1s ease-out",
+                  }}
+                />
+              </div>
             </div>
-            <img
-              src="/images/HackHeist_images/gear.png"
-              alt="Vault"
-              className="absolute h-48 w-48 z-10 p-5 fill-black"
-              style={{
-                transform: `rotate(${rotation * 2}deg)`,
-                transition: "left 0.1s ease-out, transform 0.1s ease-out",
-              }}
+            <VaultImage
+              url="/images/HackHeist_Images/gear.png"
+              height="12rem"
+              width="12rem"
+              left=""
+              right="10%"
+              top="10%"
+              down=""
+              rotation={rotation * 2}
+              invert={"invert"}
+              alt="test-white-gear"
             />
             {/* Mini white gear */}
-            <img
-              src="/images/HackHeist_images/gear.png"
-              alt="Vault"
-              className="absolute h-[4.5rem] w-[4.5rem] invert left-[78%] z-10 p-5 fill-black"
-              style={{
-                transform: `rotate(${rotation * 5}deg)`,
-                transition: "left 0.1s ease-out, transform 0.1s ease-out",
-              }}
+            <VaultImage
+              url="/images/HackHeist_Images/gear.png"
+              height="4.5rem"
+              width="4.5rem"
+              left="78%"
+              right=""
+              top=""
+              down=""
+              rotation={rotation * 5}
+              invert={"invert"}
+              alt="mini-white-gear"
             />
           </div>
         </div>
