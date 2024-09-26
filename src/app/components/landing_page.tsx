@@ -29,7 +29,7 @@ const LandingPage = () => {
           </p>
           <a
             href="https://my.hackprinceton.com/login"
-            className="mt-4 bg-white w-min whitespace-nowrap text-black p-3 rounded-xl font-extrabold text-3xl"
+            className="mt-4 bg-white hover:scale-105 transition-all hover:text-red-600 hover:animate-spin w-min whitespace-nowrap text-black p-3 rounded-xl font-extrabold text-3xl"
           >
             Apply Now!
           </a>
