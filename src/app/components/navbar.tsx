@@ -10,7 +10,7 @@ interface NavbarButton {
 const NavbarButton = (props: NavbarButton) => {
   return (
     <a
-      className="border border-red-600 rounded-xl p-2 flex items-center justify-center"
+      className="border border-red-600 hover:scale-105 transition-all rounded-xl p-2 flex items-center justify-center"
       href={props.link}
     >
       {props.name}

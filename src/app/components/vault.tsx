@@ -190,6 +190,7 @@ const Vault = () => {
                 />
               </div>
             </div>
+            {/* Random black gear  */}
             <VaultImage
               url="/images/HackHeist_Images/gear.png"
               height="h-[6rem]"
@@ -198,7 +199,7 @@ const Vault = () => {
               right=""
               top="top-[17%]"
               down=""
-              rotation={rotation * 2}
+              rotation={rotation * 4}
               invert={""}
               alt="test-white-gear"
             />
