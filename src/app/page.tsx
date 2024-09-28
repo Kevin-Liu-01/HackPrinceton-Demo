@@ -3,13 +3,16 @@ import Image from "next/image";
 import Navbar from "./components/navbar";
 import LandingPage from "./components/landing_page";
 import About from "./components/about";
+import Tracks from "./components/tracks";
 
 export default function Home() {
   return (
-    <div className="relative bg-black grid items-center justify-items-center min-h-screen pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
+    <div className="relative overflow-x-clip bg-black grid items-center justify-items-center min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
       <Navbar />
       <LandingPage />
       <About />
+      <Tracks />
+      {/* 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -56,7 +59,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }

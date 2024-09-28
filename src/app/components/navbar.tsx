@@ -10,7 +10,7 @@ interface NavbarButton {
 const NavbarButton = (props: NavbarButton) => {
   return (
     <a
-      className="border border-red-600 hover:scale-105 transition-all rounded-xl p-2 flex items-center justify-center"
+      className="border border-red-600 font-semibold hover:bg-red-600/30 hover:scale-105 transition-all rounded-xl p-2 flex items-center justify-center"
       href={props.link}
     >
       {props.name}
@@ -35,12 +35,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed z-50 top-0 w-full">
+    <nav className="fixed z-50 top-0 w-full text-white">
       <div
         className={`${
           isScrolled
-            ? "bg-black border border-x-0 border-t-0 border-b-red-600"
-            : "bg-black/50 border border-b-red-600 rounded-[2.5rem] m-4"
+            ? "bg-black border border-x-0 border-t-0 border-b-red-600 "
+            : "bg-black/10 border border-b-red-600 rounded-[2.5rem] m-4 backdrop-filter backdrop-blur-sm"
         } relative flex items-center transition-all drop-shadow-lg h-20 duration-300 px-4 py-2`}
       >
         <div
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center text-white text-xl ml-4 font-bold relative">
           HackPrinceton{" "}
-          <span className="ml-2 bg-yellow-400 text-red-600 text-xs rounded-xl px-2 py-1">
+          <span className="ml-2 bg-yellow-400 text-red-600 text-xs rounded-xl px-2 py-1 font-[family-name:var(--font-geist-mono)]">
             DEMO
           </span>
         </div>

@@ -1,56 +1,83 @@
+"use client";
 import Image from "next/image";
+import { Grid, Flex } from "@radix-ui/themes";
+import { MatrixRainingLetters } from "react-mdr";
+import { MailIcon } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="flex flex-col justify-center">
-      <div className="text-start text-7xl text-red-600 font-extrabold">
-        <p>Welcome to</p>
-        <p>HackPrinceton!</p>
-      </div>
-      <Image
-        className="dark:invert"
-        src="https://nextjs.org/icons/next.svg"
-        alt="Next.js logo"
-        width={180}
-        height={38}
-        priority
-      />
-      <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-        <li className="mb-2">
-          Get started by editing{" "}
-          <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-            src/app/page.tsx
-          </code>
-          .
-        </li>
-        <li>Save and see your csshanges instantly.</li>
-      </ol>
-      <div className="flex gap-4 items-center flex-col sm:flex-row">
-        <a
-          className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Grid
+      id="about"
+      columns="2"
+      gap="4"
+      className="text-white h-full max-w-6xl"
+    >
+      <Flex direction="column" justify="center" className="p-4">
+        <Flex
+          direction="column"
+          className="text-start mb-8 text-5xl text-red-600 font-extrabold gap-4"
         >
-          <Image
-            className="dark:invert"
-            src="https://nextjs.org/icons/vercel.svg"
-            alt="Vercel logomark"
-            width={20}
-            height={20}
+          <span className="font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
+            ABOUT
+          </span>
+          <p>WELCOME TO</p>
+          <p>HACKPRINCETON!</p>
+        </Flex>
+        <Flex
+          direction="column"
+          gap="4"
+          className=" font-[family-name:var(--font-geist-mono)]"
+        >
+          <p>
+            At HackPrinceton, you'll meet{" "}
+            <strong>
+              fellow hackers from around the world, learn new skills, and work
+              alongside seasoned mentors.
+            </strong>{" "}
+            We'll have free workshops, lecture series, mentorship, prizes,
+            games, and more. Don't have a team or even an idea? Don't worry!
+            We'll give you the tools to build something incredible.
+          </p>
+          <p>
+            <strong>
+              For 36 hours from November 8 - 10 on Princeton University’s campus
+            </strong>
+            , you’ll have the opportunity to collaborate and build out
+            brilliant, innovative, and impactful ideas.
+          </p>
+          <div className="whitespace-normal mt-2">
+            <span className="text-red-600 font-semibold">
+              Other questions? Contact us at:{" "}
+            </span>
+            <p className="mt-2">
+              <a
+                href="mailto:team@hackprinceton.com"
+                className="bg-red-600/20 w-min gap-2 whitespace-nowrap flex items-center hover:bg-red-600/50 transition-all hover:underline px-4 py-2 rounded-xl font-bold"
+              >
+                <MailIcon size={24} className="text-red-600" />
+                team@hackprinceton.com {":)"}
+              </a>
+            </p>
+          </div>
+        </Flex>
+      </Flex>
+      <Flex className="relative w-full h-full">
+        <Image
+          src="/images/HackHeist_Images/hacker.png"
+          alt="Hacker"
+          fill={true}
+          className={`object-contain z-10 rounded-xl p-10 drop-shadow-lg`}
+          priority
+        />
+        <div className=" z-[5] overflow-x-clip top-0 left-0">
+          <MatrixRainingLetters
+            key="foo-bar"
+            color="#ff0000"
+            custom_class="m-0 rotate-180 sticky top-0 p-0"
           />
-          Deploy now
-        </a>
-        <a
-          className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read our docs
-        </a>
-      </div>
-    </div>
+        </div>
+      </Flex>
+    </Grid>
   );
 };
 

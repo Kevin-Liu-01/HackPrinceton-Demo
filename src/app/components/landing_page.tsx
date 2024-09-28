@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
     <main
       id="home"
-      className="grid grid-cols-2 h-full w-full gap-8 items-center sm:items-start"
+      className="grid grid-cols-2 h-full w-full gap-8 items-center sm:items-start text-white"
     >
       <div className="flex justify-center align-center relative">
         <Vault />
@@ -25,11 +25,26 @@ const LandingPage = () => {
           </span>
           <p className="font-extrabold text-4xl">HackPrinceton Presents...</p>
           <p className="font-extrabold tracking-wider text-7xl text-red-600">
-            HACKHEIST
+            <span className=" font-[family-name:var(--font-geist-mono)]">
+              H
+            </span>
+            AC
+            <span className=" font-[family-name:var(--font-geist-mono)]">
+              K
+            </span>
+            H
+            <span className=" font-[family-name:var(--font-geist-mono)]">
+              E
+            </span>
+            IS
+            <span className=" font-[family-name:var(--font-geist-mono)]">
+              T
+            </span>
           </p>
           <a
             href="https://my.hackprinceton.com/login"
-            className="mt-4 bg-white hover:scale-105 transition-all hover:text-red-600 hover:animate-spin w-min whitespace-nowrap text-black p-3 rounded-xl font-extrabold text-3xl"
+            className="mt-4 bg-white hover:scale-105 transition-all hover:text-red-600 w-min 
+            whitespace-nowrap text-black p-3 rounded-xl font-extrabold text-3xl"
           >
             Apply Now!
           </a>

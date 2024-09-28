@@ -24,6 +24,7 @@ const VaultImage = (props: ImageProps) => {
         fill={true}
         sizes={"100%"}
         className={`${props.invert} z-10 p-5 drop-shadow-lg`}
+        priority
         style={{
           transform: `rotate(${props.rotation}deg)`,
           transition: "left 0.1s ease-out, transform 0.1s ease-out",
