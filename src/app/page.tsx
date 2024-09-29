@@ -1,5 +1,4 @@
 // "use client";
-import Image from "next/image";
 import Navbar from "./components/navbar";
 import LandingPage from "./components/landing_page";
 import About from "./components/about";

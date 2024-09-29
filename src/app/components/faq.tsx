@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Box, Flex } from "@radix-ui/themes";
 import { MatrixRainingLetters } from "react-mdr";
 import { ChevronDown, MessageCircleQuestionIcon } from "lucide-react";

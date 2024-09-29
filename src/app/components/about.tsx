@@ -30,14 +30,14 @@ const About = () => {
             className=" font-[family-name:var(--font-geist-mono)]"
           >
             <p>
-              At HackPrinceton, you'll meet{" "}
+              {"At HackPrinceton, you'll meet "}
               <strong>
                 fellow hackers from around the world, learn new skills, and work
                 alongside seasoned mentors.
               </strong>{" "}
-              We'll have free workshops, lecture series, mentorship, prizes,
+              {`We'll have free workshops, lecture series, mentorship, prizes,
               games, and more. Don't have a team or even an idea? Don't worry!
-              We'll give you the tools to build something incredible.
+              We'll give you the tools to build something incredible.`}
             </p>
             <p>
               <strong>

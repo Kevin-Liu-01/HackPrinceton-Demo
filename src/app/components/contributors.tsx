@@ -58,7 +58,7 @@ const Contributors = () => {
                   sponsor@hackprinceton.com {":)"}
                 </a>
               </Text>{" "}
-              <span>and we'll get back to you!</span>
+              <span>{"and we'll get back to you!"}</span>
             </Flex>
           </Text>
           <Flex
