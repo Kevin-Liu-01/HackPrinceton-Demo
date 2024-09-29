@@ -12,7 +12,7 @@ const TrackCard = ({ title, description, icon, color }) => {
   return (
     <Flex
       direction="column"
-      className="p-4 bg-red-600/70 backdrop-filter backdrop-blur-sm rounded-xl"
+      className="p-4 bg-red-600/70 border border-red-500 backdrop-filter hover:scale-[1.01] transition-all backdrop-blur-sm rounded-3xl"
     >
       <Flex align="center" gap="2" className="text-2xl font-semibold">
         <Box className={`border rounded-xl p-2 ${color}`}>{icon}</Box>
@@ -25,12 +25,11 @@ const TrackCard = ({ title, description, icon, color }) => {
 
 const Tracks = () => {
   return (
-    <Box className="relative w-full">
+    <Box id="tracks" className="relative w-full border-y border-red-600">
       <Grid
-        id="tracks"
         columns="2"
         gap="4"
-        className="relative text-white p-4 z-10 h-full mx-auto max-w-6xl"
+        className="relative text-white p-4 py-8 z-10 h-full mx-auto max-w-6xl"
       >
         <Flex direction="column" justify="center" className="col-span-2">
           <Flex
@@ -74,31 +73,33 @@ const Tracks = () => {
           title="HEALTHCARE"
           description="These projects tackle public health issues, reduce health inequities, or promote personal wellness. Hacks in this category can include telemedicine solutions, apps for tracking fitness and health data, and digital platforms for public health information."
           icon={<HeartIcon size={24} />}
-          color="bg-red-400 text-red-800 border-red-500"
+          color="bg-red-400 text-red-800 border-red-600"
         />
         <TrackCard
           title="SUSTAINABILITY"
           description="These projects leverage technology to protect the environment or encourage sustainable habits. Hacks in this category can include apps for tracking and reducing carbon footprints, solutions for waste management, and tools for promoting renewable energy use.          "
           icon={<LeafIcon size={24} />}
-          color="bg-green-400 text-green-800 border-green-500"
+          color="bg-green-400 text-green-800 border-green-600"
         />
         <TrackCard
           title="FINANCE"
           description="These projects innovate financial systems, improve financial literacy, or enhance personal finance management. Hacks in this category can include blockchain-based applications, budgeting and investment tools, and platforms for financial education and fraud detection.          "
           icon={<DollarSignIcon size={24} />}
-          color="bg-yellow-400 text-yellow-800 border-yellow-500"
+          color="bg-yellow-400 text-yellow-800 border-yellow-600"
         />
         <TrackCard
           title="EDUCATION & INTERACTION"
           description="These projects enhance educational access and engagement by leveraging interactive technologies. Hacks in this category can range from social networking platforms for collaborative learning, to digital media tools for teaching, interactive e-learning applications, and projects that combine various interactive elements to create engaging educational experiences.
           "
           icon={<SchoolIcon size={24} />}
-          color="bg-blue-400 text-blue-800 border-blue-500"
+          color="bg-blue-400 text-blue-800 border-blue-600"
         />
-        <Flex direction="column" className="whitespace-normal mt-2 col-span-2">
+        <Flex
+          direction="column"
+          className="whitespace-normal mt-2 col-span-2 font-[family-name:var(--font-geist-mono)]"
+        >
           <span className="text-red-600 font-semibold">
-            Want to collaborate with us on a track for Fall 2024? Contact us at
-            :{" "}
+            Want to collaborate with us on a track for Fall 2024? Contact us at:{" "}
           </span>
           <p className="mt-2">
             <a

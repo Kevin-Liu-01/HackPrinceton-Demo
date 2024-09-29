@@ -18,7 +18,7 @@ const LandingPage = () => {
           />
         </div>
       </div>
-      <div className="z-10 h-[350vh] bg-black/60 overflow-x-clip p-4 md:p-12">
+      <div className="z-10 h-[350vh] bg-black/20 backdrop-blur-sm overflow-x-clip p-4 md:p-12">
         <div className="sticky flex flex-col gap-4 top-[38%] mb-[38%]">
           <span className="font-extrabold w-min whitespace-nowrap text-xl border-2 border-white rounded-lg p-2">
             FALL 2024

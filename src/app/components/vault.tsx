@@ -12,7 +12,7 @@ const Vault = () => {
   const SiteURLS = [
     { name: "Home", color: "bg-orange-500", link: "/images/promo1.jpg" },
     { name: "About", color: "bg-green-500", link: "/images/promo2.jpg" },
-    { name: "Tracks", color: "bg-yellow-500", link: "/images/promo3.jpeg" },
+    { name: "Tracks", color: "bg-yellow-400", link: "/images/promo3.jpeg" },
     { name: "FAQ", color: "bg-blue-500", link: "/images/promo4.jpeg" },
     { name: "Sponsors", color: "bg-purple-500", link: "/images/promo5.jpg" },
     { name: "Resources", color: "bg-pink-500", link: "/images/promo6.jpg" },

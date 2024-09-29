@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className=" mx-auto grid grid-cols-6 justify-center items-center gap-4 text-sm">
           <NavbarButton name="Home" link="#home" />
           <NavbarButton name="About" link="#about" />
-          <NavbarButton name="Tracks" link="#schedule" />
+          <NavbarButton name="Tracks" link="#tracks" />
           <NavbarButton name="FAQ" link="#faq" />
           <NavbarButton name="Sponsors" link="#sponsors" />
           <NavbarButton name="Resources" link="#resources" />

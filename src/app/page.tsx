@@ -4,6 +4,8 @@ import Navbar from "./components/navbar";
 import LandingPage from "./components/landing_page";
 import About from "./components/about";
 import Tracks from "./components/tracks";
+import FAQ from "./components/faq";
+import Contributors from "./components/contributors";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <LandingPage />
       <About />
       <Tracks />
+      <FAQ />
+      <Contributors />
       {/* 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
