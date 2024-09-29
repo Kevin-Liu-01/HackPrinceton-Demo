@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Grid, Flex, Box, Text } from "@radix-ui/themes";
-import { MailIcon } from "lucide-react";
+import { Grid, Flex, Box, Text, Separator } from "@radix-ui/themes";
+import { BookDownIcon, LeafIcon, MailIcon } from "lucide-react";
 import { MatrixRainingLetters } from "react-mdr";
 
 // Sponsor data array
@@ -22,7 +22,7 @@ const Contributors = () => {
     <Flex
       id="sponsors"
       gap="4"
-      className="text-white py-8 h-full w-full bg-red-600/90 backdrop-filter backdrop-blur-sm"
+      className="relative text-white py-8 h-full w-full bg-red-600/90 backdrop-filter backdrop-blur-sm"
     >
       <Flex
         direction="column"
@@ -60,6 +60,18 @@ const Contributors = () => {
               </Text>{" "}
               <span>{"and we'll get back to you!"}</span>
             </Flex>
+            <Separator orientation="horizontal" size="4" className="my-2" />
+            <Flex align="center" gap="4">
+              View our Sponsorship Prospectus:{" "}
+              <a
+                href="https://static1.squarespace.com/static/65a3fefdb63149536ba6d3eb/t/66be5cf970cc606941e3b3d4/1723751674077/HackPrinceton_Fall2024Prospectus.pdf"
+                className="bg-gray-100 text-black hover:text-red-600 transition-all w-min gap-2 whitespace-nowrap flex items-center hover:bg-white hover:underline px-4 py-2 rounded-xl font-bold"
+              >
+                <BookDownIcon size={24} />
+                PROSPECTUS
+              </a>
+            </Flex>
+            <Separator orientation="horizontal" size="4" className="mt-2" />
           </Text>
           <Flex
             direction="column"
@@ -69,6 +81,7 @@ const Contributors = () => {
               align="center"
               className="text-black px-4 font-[family-name:var(--font-geist-mono)] whitespace-nowrap bg-gray-300 py-2 text-lg"
             >
+              <LeafIcon size={24} className="text-red-600 mr-2" />
               <strong>Fall 2024 - A BIG Thanks To…</strong>
               <Flex className="ml-auto">
                 <Box className="w-3 h-3 rounded-full bg-red-500 mx-1" />
