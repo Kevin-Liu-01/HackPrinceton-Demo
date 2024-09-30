@@ -6,7 +6,7 @@ import { BookMarkedIcon } from "lucide-react";
 const Resources = () => {
   return (
     <Flex
-      id="faq"
+      id="resources"
       gap="4"
       align="center"
       className="relative text-white h-full overflow-clip w-full py-8"
