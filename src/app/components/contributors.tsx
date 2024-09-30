@@ -34,7 +34,7 @@ const Contributors = () => {
           align="center"
           className="mb-8 text-5xl text-white font-extrabold gap-4"
         >
-          <p className="font-extrabold w-min whitespace-nowrap text-white border-2 border-white rounded-2xl p-2 px-4">
+          <p className="bg-black font-extrabold w-min whitespace-nowrap text-white border-2 border-white rounded-2xl p-2 px-4">
             CONTRIBUTORS
           </p>
         </Flex>

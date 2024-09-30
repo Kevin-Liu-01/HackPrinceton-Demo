@@ -103,7 +103,7 @@ const Faq = () => {
           align="center"
           className="mb-8 text-5xl text-red-600 font-extrabold gap-4"
         >
-          <span className="font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
+          <span className="bg-black font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
             FAQ
           </span>
           <p>FREQUENTLY ASKED QUESTIONS</p>

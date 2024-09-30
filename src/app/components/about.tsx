@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Grid, Flex } from "@radix-ui/themes";
+import { Grid, Flex, Box } from "@radix-ui/themes";
 import { MatrixRainingLetters } from "react-mdr";
 import { MailIcon } from "lucide-react";
 
@@ -47,7 +47,7 @@ const About = () => {
               , you’ll have the opportunity to collaborate and build out
               brilliant, innovative, and impactful ideas.
             </p>
-            <div className="whitespace-normal mt-2">
+            <Box className="whitespace-normal mt-2">
               <span className="text-red-600 font-semibold">
                 Other questions? Contact us at:{" "}
               </span>
@@ -60,7 +60,7 @@ const About = () => {
                   team@hackprinceton.com {":)"}
                 </a>
               </p>
-            </div>
+            </Box>
           </Flex>
         </Flex>
         <Flex className="relative w-full h-full">
@@ -68,16 +68,16 @@ const About = () => {
             src="/images/HackHeist_Images/hacker.png"
             alt="Hacker"
             fill={true}
-            className={`object-contain z-10 rounded-xl p-10 drop-shadow-lg`}
+            className={`object-contain z-10 rounded-3xl p-10 drop-shadow-lg`}
             priority
           />
-          <div className=" h-full w-full z-[5] overflow-x-clip top-0 left-0">
+          <Box className=" h-full w-full z-[5] overflow-x-clip top-0 left-0">
             <MatrixRainingLetters
               key="foo-bar"
               color="#ff0000"
               custom_class="m-0 rotate-180 sticky top-0 p-0"
             />
-          </div>
+          </Box>
         </Flex>
       </Grid>
     </Flex>

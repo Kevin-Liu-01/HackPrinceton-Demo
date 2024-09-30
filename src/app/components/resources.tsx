@@ -29,7 +29,7 @@ const Resources = () => {
           align="center"
           className="mb-8 text-5xl text-red-600 font-extrabold gap-4"
         >
-          <span className="font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
+          <span className="bg-black font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
             ADDITIONAL INFO
           </span>
           <p>RESOURCES</p>
@@ -44,8 +44,8 @@ const Resources = () => {
             <span>MLH Code of Conduct</span>
           </Flex>
           <p className="mt-2">
-            Please refer to MLH's Code of Conduct for all other standards on how
-            to build an inclusive hacking environment.
+            {`Please refer to MLH's Code of Conduct for all other standards on how
+            to build an inclusive hacking environment.`}
           </p>
         </Box>
       </Flex>
