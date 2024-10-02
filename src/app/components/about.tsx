@@ -14,7 +14,7 @@ const About = () => {
         <Flex direction="column" justify="center" className="p-4 ">
           <Flex
             direction="column"
-            className="text-start mb-8 text-4xl sm:text-5xl text-red-600 font-extrabold gap-4"
+            className="text-start mb-8 text-3xl sm:text-5xl text-red-600 font-extrabold gap-4"
           >
             <span className="font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
               ABOUT
@@ -25,7 +25,7 @@ const About = () => {
           <Flex
             direction="column"
             gap="4"
-            className="text-sm mr-4 sm:text-base font-[family-name:var(--font-geist-mono)]"
+            className="text-xs mr-4 sm:text-base font-[family-name:var(--font-geist-mono)]"
           >
             <Text>
               {"At HackPrinceton, you'll meet "}

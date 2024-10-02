@@ -101,7 +101,7 @@ const Faq = () => {
         <Flex
           direction="column"
           align="center"
-          className="mb-8 text-5xl text-red-600 font-extrabold gap-4"
+          className="mb-8 text-3xl text-center sm:text-5xl text-red-600 font-extrabold gap-4"
         >
           <span className="bg-black font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
             FAQ

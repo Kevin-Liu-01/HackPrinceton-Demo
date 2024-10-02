@@ -14,11 +14,15 @@ const TrackCard = ({ title, description, icon, color }) => {
       direction="column"
       className="p-4 bg-red-600/70 border border-red-500 backdrop-filter hover:scale-[1.01] transition-all backdrop-blur-sm rounded-3xl"
     >
-      <Flex align="center" gap="2" className="text-2xl font-semibold">
+      <Flex
+        align="center"
+        gap="2"
+        className="text-xl sm:text-2xl font-semibold"
+      >
         <Box className={`border rounded-xl p-2 ${color}`}>{icon}</Box>
         {title}
       </Flex>
-      <p className="mt-2">{description}</p>
+      <p className="mt-2 text-[0.85rem] sm:text-base">{description}</p>
     </Flex>
   );
 };
@@ -38,7 +42,7 @@ const Tracks = () => {
           <Flex
             direction="column"
             align="center"
-            className=" mb-8 text-5xl text-red-600 font-extrabold gap-4"
+            className="mb-4 sm:mb-8 text-3xl sm:text-5xl text-red-600 font-extrabold gap-4"
           >
             <span className="font-extrabold w-min whitespace-nowrap text-white text-sm border-2 border-white rounded-lg p-2">
               TRACKS
