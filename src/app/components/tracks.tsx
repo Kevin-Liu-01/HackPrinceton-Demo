@@ -1,5 +1,5 @@
 "use client";
-import { Grid, Flex, Box } from "@radix-ui/themes";
+import { Flex, Box } from "@radix-ui/themes";
 import {
   MailIcon,
   HeartIcon,
