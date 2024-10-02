@@ -35,18 +35,35 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed z-50 top-0 w-full text-white">
+    <nav
+      className="fixed z-50 top-0 w-full text-white"
+      style={{
+        // WebkitTransform: "translateZ(0)",
+        WebkitBackfaceVisibility: "hidden",
+        willChange: "transform",
+      }}
+    >
       <div
         className={`${
           isScrolled
             ? "bg-black border border-x-0 border-t-0 border-b-red-600 "
             : "bg-black/10 border border-b-red-600 rounded-[2.5rem] m-4 backdrop-filter backdrop-blur-sm"
         } relative flex items-center transition-all drop-shadow-lg h-20 duration-300 px-4 py-2`}
+        style={{
+          // WebkitTransform: "translateZ(0)",
+          WebkitBackfaceVisibility: "hidden",
+          willChange: "transform",
+        }}
       >
         <div
           className={`bg-black flex h-12 w-12 overflow-hidden items-center justify-center ${
             isScrolled ? "rounded-none" : "rounded-full"
           }`}
+          style={{
+            // WebkitTransform: "translateZ(0)",
+            WebkitBackfaceVisibility: "hidden",
+            willChange: "transform",
+          }}
         >
           <img
             src="/images/HackHeist_Images/mask.png"
@@ -61,7 +78,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        <div className=" mx-auto grid grid-cols-6 justify-center items-center gap-4 text-sm">
+        <div className="hidden sm:grid mx-auto grid-cols-6 justify-center items-center gap-4 text-sm">
           <NavbarButton name="Home" link="#home" />
           <NavbarButton name="About" link="#about" />
           <NavbarButton name="Tracks" link="#tracks" />

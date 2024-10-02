@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <div className="relative overflow-x-clip bg-black grid items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="relative overflow-x-hidden sm:overflow-x-clip bg-black grid items-center justify-items-center min-h-screen font-[family-name:var(--font-geist-sans)]">
       <Navbar />
       <LandingPage />
       <About />

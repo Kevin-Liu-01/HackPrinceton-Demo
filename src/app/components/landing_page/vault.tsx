@@ -33,7 +33,7 @@ const Vault = () => {
   }, []);
 
   return (
-    <div className="h-[350vh] z-20 p-6 relative left-0">
+    <div className="h-0 sm:h-[350vh] z-20 p-6 relative left-0 hidden sm:inline">
       <div className="sticky top-[30%] mb-[30%]">
         {/* <div className="absolute top-0 left-0">
           <ReactCurvedText
@@ -103,6 +103,8 @@ const Vault = () => {
               style={{
                 width: `${offsetX}px`, // Path stretches as the circle moves
                 transition: "width 0.1s ease-out", // Smooth width change
+                WebkitTransform: "translateZ(0)",
+                WebkitBackfaceVisibility: "hidden",
               }}
             >
               <VaultImage
@@ -131,6 +133,8 @@ const Vault = () => {
             left: `${offsetX}px`,
             transform: `rotate(${rotation}deg)`,
             transition: "left 0.1s ease-out, transform 0.1s ease-out",
+            WebkitTransform: "translateZ(0)",
+            WebkitBackfaceVisibility: "hidden",
           }}
         >
           {/* White Connector Gear */}
@@ -169,6 +173,8 @@ const Vault = () => {
             style={{
               transform: `rotate(-${rotation * 2}deg)`,
               transition: "left 0.1s ease-out, transform 0.1s ease-out",
+              WebkitTransform: "translateZ(0)",
+              WebkitBackfaceVisibility: "hidden",
             }}
           />
           {/* Vault Handle */}

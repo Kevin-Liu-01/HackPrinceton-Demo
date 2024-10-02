@@ -28,6 +28,8 @@ const VaultImage = (props: ImageProps) => {
         style={{
           transform: `rotate(${props.rotation}deg)`,
           transition: "left 0.1s ease-out, transform 0.1s ease-out",
+          WebkitBackfaceVisibility: "hidden",
+          willChange: "transform",
         }}
       />
     </div>
