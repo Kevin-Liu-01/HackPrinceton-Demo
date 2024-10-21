@@ -14,6 +14,26 @@ const sponsors = [
     name: "Equivlent",
     imageSrc: "/images/sponsors/equivlent.jpg",
   },
+  {
+    name: "Capital One",
+    imageSrc: "/images/sponsors/capitalone.png",
+  },
+  {
+    name: "BGB",
+    imageSrc: "/images/sponsors/bgb.png",
+  },
+  {
+    name: "Princeton Health Initiative",
+    imageSrc: "/images/sponsors/prhi.png",
+  },
+  {
+    name: "Spline",
+    imageSrc: "/images/sponsors/spline.png",
+  },
+  {
+    name: "Warp",
+    imageSrc: "/images/sponsors/warp.svg",
+  },
   // Add more sponsors here
 ];
 
@@ -94,18 +114,20 @@ const Contributors = () => {
                 <Box className="w-3 h-3 rounded-full bg-green-500 mx-1" />
               </Flex>
             </Flex>
-            <div className="relative grid gap-5 grid-cols-1 sm:grid-cols-2 w-full sm:h-48 p-4 bg-gray-950">
+            <div className="relative grid gap-5 grid-cols-1 sm:grid-cols-2 w-full h-full p-4 bg-gray-950">
               {sponsors.map((sponsor, index) => (
                 <Box
                   key={index}
-                  className="h-24 sm:h-auto z-10 relative hover:scale-[1.01] transition-all p-4 rounded-2xl bg-white/80 border border-red-200/40 backdrop-filter backdrop-blur-sm"
+                  className="h-full z-10 relative hover:scale-[1.01] transition-all rounded-2xl bg-black/30 border border-red-200/40 backdrop-filter backdrop-blur-sm"
                 >
-                  <Image
-                    src={sponsor.imageSrc}
-                    alt={sponsor.name}
-                    fill={true}
-                    className="object-cover rounded-2xl"
-                  />
+                  <Box className="min-h-[12rem] sm:h-auto">
+                    <Image
+                      src={sponsor.imageSrc}
+                      alt={sponsor.name}
+                      fill={true}
+                      className="object-contain rounded-2xl p-4"
+                    />
+                  </Box>
                 </Box>
               ))}
               <div className="absolute h-full w-full z-[5] overflow-x-clip top-0 left-0">
