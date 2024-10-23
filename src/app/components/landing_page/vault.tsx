@@ -10,23 +10,25 @@ const Vault = () => {
   const [offsetX, setOffsetX] = useState(0);
   const [rotation, setRotation] = useState(0);
   const SiteURLS = [
-    { name: "Home", color: "bg-orange-500", link: "/images/promo1.jpg" },
-    { name: "About", color: "bg-green-500", link: "/images/promo2.jpg" },
-    { name: "Tracks", color: "bg-yellow-400", link: "/images/promo3.jpeg" },
-    { name: "FAQ", color: "bg-blue-500", link: "/images/promo4.jpeg" },
-    { name: "Sponsors", color: "bg-purple-500", link: "/images/promo5.jpg" },
-    { name: "Resources", color: "bg-pink-500", link: "/images/promo6.jpg" },
+    { name: "Home", color: "bg-red-100", link: "/images/promo1.jpg" },
+    { name: "About", color: "bg-red-200", link: "/images/promo2.jpg" },
+    { name: "Tracks", color: "bg-red-300", link: "/images/promo3.jpeg" },
+    { name: "FAQ", color: "bg-[#f78f8f]", link: "/images/promo4.jpeg" },
+    { name: "Sponsors", color: "bg-red-400", link: "/images/promo5.jpg" },
+    { name: "Resources", color: "bg-red-500", link: "/images/promo6.jpg" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+      // console.log(scrollPosition);
+      // if (scrollPosition < 1800) {
       setOffsetX(scrollPosition / 2);
       setRotation(scrollPosition / 2);
+      // }
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -92,7 +94,10 @@ const Vault = () => {
           >
             {/* Overlapping circles */}
             {SiteURLS.map((folder, index) => (
-              <div key={index} className="relative group h-full w-full ml--6">
+              <div
+                key={index}
+                className="relative group h-full mb-3 w-full ml--6"
+              >
                 {/* Circle for each folder */}
                 <VaultFolder folder={folder} />
               </div>
