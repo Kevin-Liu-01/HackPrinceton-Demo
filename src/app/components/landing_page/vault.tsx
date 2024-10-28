@@ -21,11 +21,18 @@ const Vault = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      // console.log(scrollPosition);
-      // if (scrollPosition < 1800) {
-      setOffsetX(scrollPosition / 2);
-      setRotation(scrollPosition / 2);
-      // }
+      const maxRotation = 1080; // 3 rotations * 360 degrees
+
+      // Calculate new rotation value
+      let newRotation = scrollPosition / 2;
+
+      // Limit rotation to 5 full rotations
+      if (newRotation > maxRotation) {
+        newRotation = maxRotation;
+      }
+
+      setOffsetX(newRotation);
+      setRotation(newRotation);
     };
 
     window.addEventListener("scroll", handleScroll);

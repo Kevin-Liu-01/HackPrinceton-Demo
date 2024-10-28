@@ -34,7 +34,38 @@ const sponsors = [
     name: "Warp",
     imageSrc: "/images/sponsors/warp.svg",
   },
-  // Add more sponsors here
+  {
+    name: "D.E. Shaw",
+    imageSrc: "/images/sponsors/deshaw.png",
+  },
+  {
+    name: "Coinbase",
+    imageSrc: "/images/sponsors/coinbase.png",
+  },
+  {
+    name: "E-Club",
+    imageSrc: "/images/sponsors/eclub.jpg",
+  },
+  {
+    name: "ORFE",
+    imageSrc: "/images/sponsors/orfe.webp",
+  },
+  {
+    name: "Mixmax",
+    imageSrc: "/images/sponsors/mixmax.svg",
+  },
+  {
+    name: "Standout",
+    imageSrc: "/images/sponsors/standout.png",
+  },
+  {
+    name: "VerbWire",
+    imageSrc: "/images/sponsors/verbwire.svg",
+  },
+  {
+    name: "DevIt",
+    imageSrc: "/images/sponsors/devit.png",
+  },
 ];
 
 const Contributors = () => {
@@ -114,7 +145,7 @@ const Contributors = () => {
                 <Box className="w-3 h-3 rounded-full bg-green-500 mx-1" />
               </Flex>
             </Flex>
-            <div className="relative grid gap-5 grid-cols-1 sm:grid-cols-2 w-full h-full p-4 bg-gray-950">
+            <div className="relative grid gap-5 grid-cols-1 sm:grid-cols-3 w-full h-full p-4 bg-gray-950">
               {sponsors.map((sponsor, index) => (
                 <Box
                   key={index}
@@ -134,7 +165,7 @@ const Contributors = () => {
                 <MatrixRainingLetters
                   key="foo-bar"
                   color="#ff0000"
-                  custom_class="m-0 rotate-180 sticky top-0 p-0"
+                  custom_class="m-0 h-full rotate-180 sticky top-0 p-0"
                 />
               </div>
             </div>
