@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import MLHBanner from "./mlh";
 import { MenuIcon } from "lucide-react";
-import { Row } from "@radix-ui/themes/src/components/table.jsx";
 
 interface NavbarButton {
   name: string;
