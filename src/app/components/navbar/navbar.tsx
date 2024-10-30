@@ -113,7 +113,7 @@ const Navbar = () => {
           </button>
         </div>
         {/* Mobile Banner */}
-        <div className="absolute transition-all bottom-0 right-0 w-full">
+        <div className="absolute transition-all bottom-0 right-0 w-full sm:hidden inline">
           <MLHBanner />
         </div>
       </div>

@@ -4,7 +4,7 @@ const MLHBanner = () => {
       href="https://mlh.io/na?utm_source=na-hackathon&amp;utm_medium=TrustBadge&amp;utm_campaign=2025-season&amp;utm_content=blue"
       target="_blank"
       rel="noopener noreferrer"
-      className="absolute right-[10%] top-0 z-50 w-12 sm:w-16 md:w-20 lg:w-24"
+      className="absolute right-[10%] top-0 z-50 w-16 md:w-20 lg:w-24"
     >
       <img
         alt="Major League Hacking 2025 Hackathon Season"
