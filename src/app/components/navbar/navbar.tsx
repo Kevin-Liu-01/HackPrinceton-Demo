@@ -87,9 +87,9 @@ const Navbar = () => {
         </div>
         <div className="flex items-center text-white text-xl ml-4 font-bold relative">
           HackPrinceton{" "}
-          <span className="ml-2 bg-yellow-400 text-red-600 text-xs rounded-xl px-2 py-1 font-[family-name:var(--font-geist-mono)]">
+          {/* <span className="ml-2 bg-yellow-400 text-red-600 text-xs rounded-xl px-2 py-1 font-[family-name:var(--font-geist-mono)]">
             DEMO
-          </span>
+          </span> */}
         </div>
 
         {/* Web navigation */}
