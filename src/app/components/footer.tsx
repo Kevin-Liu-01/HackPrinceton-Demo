@@ -24,7 +24,7 @@ const Footer = () => {
           gap="2"
           className="text-white text-lg whitespace-nowrap"
         >
-          <Box>© 2024 HackPrinceton Demo</Box>
+          <Box>© 2024 HackPrinceton</Box>
           <Flex gap="4" align="center" className="transition-all">
             <span className="text-xs">FOLLOW OUR SOCIALS:</span>
             <a
